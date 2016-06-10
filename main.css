@@ -1,0 +1,137 @@
+/*$width: 250px;
+$lagoon-blue: #62fdca;
+
+.math {
+  width: $width;
+  text-align: center;
+  background-color: fade-out($lagoon-blue, 0.5);
+  color: red + blue;
+  height: $width/6;
+  line-height: $width/6;
+  border-radius: $width/30;
+  font-size: $width/6/2;
+}*/
+
+.math {
+  width: 250px;
+  text-align: center;
+  background-color: rgba(98, 253, 202, 0.5);
+  color: magenta;
+  height: 41.66667px;
+  line-height: 41.66667px;
+  border-radius: 8.33333px;
+  font-size: 20.83333px;
+}
+
+/*$list: (orange, purple, teal);
+
+//Add your each-loop here
+@each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}*/
+
+.orange {
+  background: orange;
+}
+
+.purple {
+  background: purple;
+}
+
+.teal {
+  background: teal;
+}
+
+/*$total: 10; //Number of .ray divs in our html
+$step: 360deg / $total; //Used to compute the hue based on color-wheel
+
+.ray {
+  height: 30px;
+}
+
+//Add your for-loop here:
+@for $i from 1 through $total {
+   .ray:nth-child(#{$i}){
+      background: adjust-hue(blue, $i * $step);
+      width: if($i % 2 == 0, 300px, 350px);
+      margin-left: if($i % 2 == 0, 0px, 50px);
+   }
+}*/
+
+.ray {
+  height: 30px;
+}
+
+/*Note:
+nth-child() works on the nth .ray div, which is a child of its parent .rays
+If the .ray divs are not contained with a .rays div, then the parent of .ray is body.
+The 1st child of body is .math div,
+2nd child is br
+3rd child is .orange div
+4th child is .purple div
+5th child is .teal div
+6th child is br
+Therefore, because the 7th child of body is the first .ray div, it will be styled
+with the background-color #00ff33, and not #9900ff which is the 1st child color.*/
+
+.ray:nth-child(1) {
+  background: #9900ff;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(2) {
+  background: #ff00cc;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(3) {
+  background: #ff0033;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(4) {
+  background: #ff6600;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(5) {
+  background: yellow;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(6) {
+  background: #66ff00;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(7) {
+  background: #00ff33;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(8) {
+  background: #00ffcc;
+  width: 300px;
+  margin-left: 0px;
+}
+
+.ray:nth-child(9) {
+  background: #0099ff;
+  width: 350px;
+  margin-left: 50px;
+}
+
+.ray:nth-child(10) {
+  background: blue;
+  width: 300px;
+  margin-left: 0px;
+}
